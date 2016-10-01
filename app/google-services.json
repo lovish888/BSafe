@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "905013858382",
+    "firebase_url": "https://informe-a3bbf.firebaseio.com",
+    "project_id": "informe-a3bbf",
+    "storage_bucket": "informe-a3bbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905013858382:android:de4682090ef4095d",
+        "android_client_info": {
+          "package_name": "com.insane.lovish.informe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905013858382-eva02kq191rheolripjr96c3l584lf5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnrAqIjmzq4KoRU184BIK8CCchBpT9MR0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

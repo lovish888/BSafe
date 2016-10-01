@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BSafe</string>
+    <string name="informed">Informed</string>
+    <string name="app_desp">This is the app description</string>
+    <string name="forget_password_text">Forgot Password?</string>
+    <string name="signup_long_text">No account yet? Create one</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
 </resources>
