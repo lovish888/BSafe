@@ -1,9 +1,15 @@
 <resources>
-    <string name="app_name">BSafe</string>
-    <string name="informed">Informed</string>
-    <string name="app_desp">This is the app description</string>
+    <string name="app_name">Informe</string>
+    <string name="informe">Informe</string>
+    <string name="app_desp">\"This is the app description\"</string>
     <string name="forget_password_text">Forgot Password?</string>
     <string name="signup_long_text">No account yet? Create one</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="title_activity_informe_home">Informe</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

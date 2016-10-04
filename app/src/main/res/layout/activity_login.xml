@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#1f4e79"
-    android:fitsSystemWindows="true">
+    android:background="@color/textColor"
+    android:fitsSystemWindows="true"
+    app:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         android:orientation="vertical"
         android:paddingEnd="24dp"
         android:paddingLeft="24dp"
@@ -22,7 +26,7 @@
             android:layout_marginBottom="24dp"
             android:layout_marginEnd="12dp"
             android:layout_marginRight="12dp"
-            android:src="@mipmap/app_logo" />
+            android:src="@drawable/app_logo" />
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout
@@ -78,13 +82,12 @@
         <TextView
             android:id="@+id/forget_password"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginBottom="24dp"
             android:layout_marginEnd="12dp"
             android:layout_marginRight="12dp"
             android:gravity="center"
             android:text="@string/forget_password_text"
-            android:textColor="#ffffff"
             android:textSize="15sp" />
 
         <TextView
@@ -96,7 +99,6 @@
             android:layout_marginRight="12dp"
             android:gravity="center"
             android:text="@string/signup_long_text"
-            android:textColor="#ffffff"
             android:textSize="20sp" />
 
     </LinearLayout>

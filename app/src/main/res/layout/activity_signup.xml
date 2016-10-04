@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/textColor"
     android:fitsSystemWindows="true"
-    android:background="#1f4e79">
+    app:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:paddingRight="24dp"
+        android:paddingTop="56dp">
 
-        <ImageView android:src="@mipmap/app_logo"
+        <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
+            android:src="@drawable/app_logo" />
 
         <!--  Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp">
-            <EditText android:id="@+id/input_name"
+
+            <EditText
+                android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
                 android:hint="Name"
+                android:inputType="textCapWords"
                 android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
 
@@ -38,11 +44,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp">
-            <EditText android:id="@+id/input_email"
+
+            <EditText
+                android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
 
@@ -51,11 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp">
-            <EditText android:id="@+id/input_password"
+
+            <EditText
+                android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:hint="Password"
+                android:inputType="textPassword"
                 android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
 
@@ -64,23 +74,23 @@
             android:id="@+id/btn_signup"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@layout/shapes"
             android:padding="12dp"
             android:text="Sign up"
             android:textColor="@color/textColor"
-            android:textSize="18sp"
-            android:background="@layout/shapes"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="18sp" />
 
-        <TextView android:id="@+id/link_login"
+        <TextView
+            android:id="@+id/link_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="Already a member? Login"
             android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="#ffffff" />
+            android:text="Already a member? Login"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </ScrollView>

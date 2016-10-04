@@ -6,7 +6,7 @@
     android:layout_width="match_parent">
 
     <solid
-        android:color="#1f4e79"
+        android:color="#00B9E6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </solid>

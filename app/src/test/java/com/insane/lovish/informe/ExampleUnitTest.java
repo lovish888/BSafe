@@ -1,4 +1,4 @@
-package com.insane.lovish.bsafe;
+package com.insane.lovish.informe;
 
 import org.junit.Test;
 

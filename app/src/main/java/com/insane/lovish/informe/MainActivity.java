@@ -1,4 +1,4 @@
-package com.insane.lovish.bsafe;
+package com.insane.lovish.informe;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

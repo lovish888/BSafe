@@ -1,4 +1,4 @@
-package com.insane.lovish.bsafe;
+package com.insane.lovish.informe;
 
 import android.app.Activity;
 import android.content.Intent;

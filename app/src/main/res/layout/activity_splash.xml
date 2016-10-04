@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/appThemeColor"
+    android:background="@color/textColor"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,9 +14,10 @@
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:scaleType="fitXY"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="60dp"
-        android:src="@mipmap/app_logo"
+        android:src="@drawable/app_logo"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -26,10 +27,10 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_below="@id/logo"
-        android:text="@string/informed"
-        android:textColor="#ffffff"
+        android:text="@string/informe"
+        android:textColor="#00B9E6"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:typeface="monospace" />
 
     <TextView
         android:id="@+id/app_desp"
@@ -38,9 +39,10 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/app_desp"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="#00001f"
         android:textSize="20sp"
         android:textStyle="italic"
+        android:typeface="monospace"
         tools:targetApi="jelly_bean_mr1"
         android:layout_below="@+id/logo_text"
         android:layout_centerHorizontal="true"
