@@ -70,7 +70,6 @@ public class SignupActivity extends AppCompatActivity {
         mSignUpButton = (Button) findViewById(R.id.btn_signup);
         mLoginLink = (TextView) findViewById(R.id.link_login);
 
-
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,38 +133,6 @@ public class SignupActivity extends AppCompatActivity {
         });
         android.app.AlertDialog dialog = builder.create();
         dialog.show();
-    }
-
-    public class CheckInternet extends AsyncTask<Void, Void, Boolean> {
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-            try {
-                HttpURLConnection urlc = (HttpURLConnection) (new URL("http://clients3.google.com/generate_204").openConnection());
-                urlc.setRequestProperty("User-Agent", "Android");
-                urlc.setRequestProperty("Connection", "close");
-                urlc.setConnectTimeout(1500);
-                urlc.connect();
-                return (urlc.getResponseCode() == 204 &&
-                        urlc.getContentLength() == 0);
-            } catch (IOException e) {
-                Log.e("Filter", "Error checking internet connection", e);
-                return false;
-            }
-        }
-
-        @Override
-        public void onPostExecute(Boolean result) {
-
-            progressDialog.setIndeterminate(false);
-            progressDialog.dismiss();
-            mSignUpButton.setEnabled(true);
-            if (result) {
-                onSignupSuccess();
-            } else {
-                ErrorDialog();
-            }
-        }
     }
 
     public void onSignupSuccess() {
@@ -238,6 +205,38 @@ public class SignupActivity extends AppCompatActivity {
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
+    public class CheckInternet extends AsyncTask<Void, Void, Boolean> {
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            try {
+                HttpURLConnection urlc = (HttpURLConnection) (new URL("http://clients3.google.com/generate_204").openConnection());
+                urlc.setRequestProperty("User-Agent", "Android");
+                urlc.setRequestProperty("Connection", "close");
+                urlc.setConnectTimeout(1500);
+                urlc.connect();
+                return (urlc.getResponseCode() == 204 &&
+                        urlc.getContentLength() == 0);
+            } catch (IOException e) {
+                Log.e("Filter", "Error checking internet connection", e);
+                return false;
+            }
+        }
+
+        @Override
+        public void onPostExecute(Boolean result) {
+
+            progressDialog.setIndeterminate(false);
+            progressDialog.dismiss();
+            mSignUpButton.setEnabled(true);
+            if (result) {
+                onSignupSuccess();
+            } else {
+                ErrorDialog();
+            }
         }
     }
 }

@@ -34,7 +34,8 @@ public class InformeHome extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("  Informe");
-        getSupportActionBar().setLogo(R.drawable.app_logo);
+        getSupportActionBar().setLogo(R.mipmap.app_icon);
+        getSupportActionBar().setElevation(0);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -78,7 +79,12 @@ public class InformeHome extends AppCompatActivity {
                 e.printStackTrace();
             }
             startActivity(new Intent(InformeHome.this, LoginActivity.class));
-        }
+
+        } else if (id == R.id.feedback) {
+            startActivity(new Intent(InformeHome.this, Feedback.class));
+
+        } else if (id == R.id.emergency_contacts)
+            startActivity(new Intent(InformeHome.this, EmergencyContacts.class));
 
         return true;
     }

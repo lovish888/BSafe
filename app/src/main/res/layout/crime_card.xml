@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#f5f3f3"
+    android:orientation="vertical"
+    android:paddingTop="12dp">
+
+
+    <ImageView
+        android:id="@+id/crime_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/crime_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:maxLength="20"
+        android:text="by Steve Jobs"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:id="@+id/time_passed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/crime_author"
+        android:layout_toRightOf="@+id/crime_author"
+        android:text="2h"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:id="@+id/crime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/crime_author"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Crime happened here"
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
+</RelativeLayout>

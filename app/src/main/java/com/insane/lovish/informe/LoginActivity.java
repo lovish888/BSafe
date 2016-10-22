@@ -82,6 +82,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+                EnterEmailDialogFragment fragment = new EnterEmailDialogFragment();
+                fragment.show(manager, "emailDialog");
+            }
+        });
     }
 
     public void findIds() {
@@ -139,38 +148,6 @@ public class LoginActivity extends AppCompatActivity {
         });
         android.app.AlertDialog dialog = builder.create();
         dialog.show();
-    }
-
-    public class CheckInternet extends AsyncTask<Void, Void, Boolean> {
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-            try {
-                HttpURLConnection urlc = (HttpURLConnection) (new URL("http://clients3.google.com/generate_204").openConnection());
-                urlc.setRequestProperty("User-Agent", "Android");
-                urlc.setRequestProperty("Connection", "close");
-                urlc.setConnectTimeout(1500);
-                urlc.connect();
-                return (urlc.getResponseCode() == 204 &&
-                        urlc.getContentLength() == 0);
-            } catch (IOException e) {
-                Log.e("Filter", "Error checking internet connection", e);
-                return false;
-            }
-        }
-
-        @Override
-        public void onPostExecute(Boolean result) {
-
-            progressDialog.setIndeterminate(false);
-            progressDialog.dismiss();
-            mLoginButton.setEnabled(true);
-            if (result) {
-                onLoginSuccess();
-            } else {
-                ErrorDialog();
-            }
-        }
     }
 
     public void onLoginSuccess() {
@@ -235,6 +212,38 @@ public class LoginActivity extends AppCompatActivity {
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
+    public class CheckInternet extends AsyncTask<Void, Void, Boolean> {
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            try {
+                HttpURLConnection urlc = (HttpURLConnection) (new URL("http://clients3.google.com/generate_204").openConnection());
+                urlc.setRequestProperty("User-Agent", "Android");
+                urlc.setRequestProperty("Connection", "close");
+                urlc.setConnectTimeout(1500);
+                urlc.connect();
+                return (urlc.getResponseCode() == 204 &&
+                        urlc.getContentLength() == 0);
+            } catch (IOException e) {
+                Log.e("Filter", "Error checking internet connection", e);
+                return false;
+            }
+        }
+
+        @Override
+        public void onPostExecute(Boolean result) {
+
+            progressDialog.setIndeterminate(false);
+            progressDialog.dismiss();
+            mLoginButton.setEnabled(true);
+            if (result) {
+                onLoginSuccess();
+            } else {
+                ErrorDialog();
+            }
         }
     }
 }

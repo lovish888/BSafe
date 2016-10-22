@@ -5,4 +5,6 @@
     <color name="colorAccent">#0dd1ef</color>
     <color name="appThemeColor">#00B9E6</color>
     <color name="textColor">#ffffff</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

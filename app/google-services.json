@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "905013858382-or5p73kpn8kak2981hhdbk56s1ect7ap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.insane.lovish.informe",
+            "certificate_hash": "8C0E254A09FB7E1ACD48AD8FA51B183ADC336577"
+          }
+        },
+        {
           "client_id": "905013858382-eva02kq191rheolripjr96c3l584lf5g.apps.googleusercontent.com",
           "client_type": 3
         }

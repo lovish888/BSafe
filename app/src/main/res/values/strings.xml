@@ -1,15 +1,40 @@
 <resources>
     <string name="app_name">Informe</string>
     <string name="informe">Informe</string>
-    <string name="app_desp">\"This is the app description\"</string>
+    <string name="app_desp">\"They want what you\'ve got\, don\'t give it to them.\"</string>
     <string name="forget_password_text">Forgot Password?</string>
     <string name="signup_long_text">No account yet? Create one</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
     <string name="title_activity_informe_home">Informe</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="feedback">Feedback</string>
+    <string name="logout">Logout</string>
+    <string name="write_here">Write here</string>
+    <string name="submit">Submit</string>
+    <string name="login">LOGIN</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+    <string name="enter_your_email_to_receive_password_reset_link">Enter your email to receive password reset link</string>
+    <string name="blog_fragment">Blog Fragment</string>
+    <string name="police">Police</string>
+    <string name="police_number">100</string>
+    <string name="general">General</string>
+    <string name="trusted">Trusted</string>
+    <string name="police_text">Police</string>
+    <string name="ambulance_text">Ambulance</string>
+    <string name="firebrigade_text">Fire Brigade</string>
+    <string name="coming_soon">Coming Soon</string>
+
+    <string name="title_activity_crime_card_details">CrimeCardDetails</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="add">Add</string>
 </resources>
