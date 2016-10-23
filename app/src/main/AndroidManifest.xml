@@ -49,6 +49,11 @@
             android:parentActivityName=".InformeHome"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".NewReportActivity"
+            android:parentActivityName=".InformeHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
     </application>
 
 </manifest>

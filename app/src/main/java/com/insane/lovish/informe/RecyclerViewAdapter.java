@@ -25,6 +25,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
     private Context context;
     private List<CrimeDetailsVariables> crimeDetails = Collections.emptyList();
     private List<ContactDetails> contactDetails = Collections.emptyList();
+    private List<BlogDetailsVariables> blogDetails = Collections.emptyList();
     private LayoutInflater inflator;
 
     public RecyclerViewAdapter(Context context, List<CrimeDetailsVariables> crimeDetails) {
@@ -41,15 +42,27 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
         counter = 2;
     }
 
+    public RecyclerViewAdapter(Context context, List<BlogDetailsVariables> blogDetails, float noUse) {
+        this.context = context;
+        inflator = LayoutInflater.from(context);
+        this.blogDetails = blogDetails;
+        counter = 3;
+    }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = null;
         if (counter == 1) {
             view = inflator.inflate(R.layout.crime_card, parent, false);
+
         } else if (counter == 2) {
             view = inflator.inflate(R.layout.contact_card, parent, false);
+
+        } else if (counter == 3) {
+            view = inflator.inflate(R.layout.blog_card, parent, false);
         }
+
         return new MyViewHolder(view);
     }
 
@@ -66,6 +79,11 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
             ContactDetails current = contactDetails.get(position);
             holder.name.setText(current.getName());
             holder.number.setText(current.getNumber());
+
+        } else if (counter == 3) {
+            BlogDetailsVariables current = blogDetails.get(position);
+            holder.title.setText(current.getTitle());
+            holder.author.setText(current.getAuthor());
         }
     }
 
@@ -75,6 +93,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
             return crimeDetails.size();
         } else if (counter == 2) {
             return contactDetails.size();
+        } else if (counter == 3) {
+            return blogDetails.size();
         }
         return 0;
     }
@@ -86,6 +106,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
         TextView Title, Author, TimePassed;
         //Counter = 2
         TextView name, number;
+        //Counter = 3
+        TextView title, author;
 
         MyViewHolder(View itemView) {
             super(itemView);
@@ -100,6 +122,10 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
                 name = (TextView) itemView.findViewById(R.id.name);
                 number = (TextView) itemView.findViewById(R.id.number);
                 itemView.setOnLongClickListener(this);
+
+            } else if (counter == 3) {
+                title = (TextView) itemView.findViewById(R.id.blog_title);
+                author = (TextView) itemView.findViewById(R.id.blog_author);
             }
         }
 
@@ -116,6 +142,9 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:" + current.getNumber()));
                 context.startActivity(callIntent);
+
+            } else if (counter == 3) {
+
             }
         }
 
